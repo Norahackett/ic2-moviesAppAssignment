@@ -25,6 +25,12 @@ const MovieListPage = (props) => {
   const [titleFilter, setTitleFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const addToFavourites = (movieId) => {
+    const updatedMovies = movies.map((m) =>
+      m.id === movieId ? { ...m, favourite: true } : m
+    );
+    setMovies(updatedMovies);
+  };
 
   const genreId = Number(genreFilter);
 
@@ -63,7 +69,7 @@ const MovieListPage = (props) => {
         <Header title={"Home Page"} />
       </Grid>
       <Grid item container spacing={5}>
-        <MovieList movies={displayedMovies}></MovieList>
+      <MovieList movies={displayedMovies} selectFavourite={addToFavourites} />
       </Grid>
     </Grid>
     <Fab
