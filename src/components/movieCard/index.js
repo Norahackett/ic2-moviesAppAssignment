@@ -91,4 +91,3 @@ export default function MovieCard({ movie, action}) {
   );
 }
 
-//export default MovieCard;
