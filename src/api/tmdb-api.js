@@ -62,9 +62,9 @@ export const getMovie = (args) => {
    });
   };
 
-  export const getMovieReviews = (id) => {
+  export const getMovieReviews = () => {
     return fetch(
-      `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
+      `https://api.themoviedb.org/3/movie/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
     )
       .then((res) => res.json())
       .then((json) => {
@@ -73,9 +73,9 @@ export const getMovie = (args) => {
       });  
   };
 
-  export const getUpcoming = (id) => {
+  export const getUpcoming = async () => {
     return fetch(
-      `https://api.themoviedb.org/3/movie/${id}/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}`
       ).then( (response) => {
         if (!response.ok) {
           throw new Error(response.json().message);

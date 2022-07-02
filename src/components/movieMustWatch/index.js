@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import PlaylistIcon from "@material-ui/icons/PlaylistAddCheck";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
 //import IconButton from "@material-ui/core/IconButton";
@@ -24,28 +24,28 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MovieCard({ movie, action}) {
+export default function MovieMustWatch({ movie, action}) {
   const classes = useStyles();
-  const { favourites, addToFavourites } = useContext(MoviesContext);
+  const { mustWatches,  addToMustWatches } = useContext(MoviesContext);
 
-  if (favourites.find((id) => id === movie.id)) {
-    movie.favourite = true;
+  if (mustWatches.find((id) => id === movie.id)) {
+    movie.mustWatch = true;
   } else {
-    movie.favourite = false
+    movie.mustWatch = false
   }
 
-  const handleAddToFavourite = (e) => {
+  const handleAddToMustWatch = (e) => {
     e.preventDefault();
-    addToFavourites(movie);
+    addToMustWatches(movie);
   };
   return (
     <Card className={classes.card}>
       <CardHeader
       className={classes.header}
       avatar={
-        movie.favourite ? (
+        movie.mustWatch ? (
           <Avatar className={classes.avatar}>
-            <FavoriteIcon />
+            <PlaylistIcon />
           </Avatar>
         ) : null
       }

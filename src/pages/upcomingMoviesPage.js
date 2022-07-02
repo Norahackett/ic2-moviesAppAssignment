@@ -1,9 +1,9 @@
 import React from "react";  // useState/useEffect redundant 
-import PageTemplate from '../components/templateMovieListPage';
+import PageTemplate from '../components/templateMustWatch';
 import { getUpcoming } from "../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
-import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist'
+import PlaylistAddIcon from '../components/cardIcons/addToMustWatch'
 
 
 const UpcomingMoviesPage = () => {
@@ -18,20 +18,19 @@ const UpcomingMoviesPage = () => {
   }  
   const movies = data.results;
 
-  const AddToFavouritesIcon = () => null;
+  //const AddToMustWatchIcon = () => null;
   
   return (
     <PageTemplate
       title='Upcoming Movies'
       movies={movies}
       action={(movie) => {
-        return <AddToPlaylistIcon movie={movie} />
+        return <PlaylistAddIcon movie={movie} />
       }}
       />
     );
   };
 
 export default UpcomingMoviesPage;
-
 
 
