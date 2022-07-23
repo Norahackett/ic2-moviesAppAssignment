@@ -17,4 +17,5 @@ const AddToFavouritesIcon = ({ movie }) => {
   );
 };
 
+
 export default AddToFavouritesIcon;

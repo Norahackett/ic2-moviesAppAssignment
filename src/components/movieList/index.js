@@ -11,7 +11,4 @@ const MovieList = ( {movies, action }) => {
   return movieCards;
 };
 
-
-
-
 export default MovieList;
