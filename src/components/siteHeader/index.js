@@ -66,7 +66,7 @@ const SiteHeader = () => {
             TMDB Client
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            All you ever wanted to know about Movies!
+            All you ever wanted to know about Movies and TV series!
           </Typography>
           {isMobile ? (
             <>

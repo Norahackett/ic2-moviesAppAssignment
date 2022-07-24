@@ -31,7 +31,7 @@ const TvDetailsPage = () => {
           </PageTemplate>
         </>
       ) : (
-        <p>Waiting for tv details</p>
+        <p>Waiting for TV details</p>
       )}
     </>
   );

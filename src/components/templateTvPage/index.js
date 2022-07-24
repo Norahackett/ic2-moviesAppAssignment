@@ -42,7 +42,6 @@ const TemplateTvPage = ({ tv, children }) => {
   return (
     <div className={classes.root}>
       <TvHeader tv={tv} />
-
       <Grid container spacing={5} style={{ padding: "15px" }}>
         <Grid item xs={3}>
           <div className={classes.imageListRoot}>
