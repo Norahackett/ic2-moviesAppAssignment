@@ -16,7 +16,7 @@ import TopRatedMoviesPage from './pages/topRatedPage';
 import TvSeriesPage from './pages/tvSeriesPage';
 import TvPage from './pages/tvDetailsPage';
 import TvReviewPage from "./pages/tvReviewPage";
-
+import SimilarMoviesPage from "./pages/similarMoviesPage";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -47,6 +47,7 @@ const App = () => {
         <Route path="/tv/tv_series" element={<TvSeriesPage/>}
         />
         <Route path="/tv/:id" element={<TvPage/>} />
+        <Route path="/similarmovies/:id/" element={<SimilarMoviesPage/>} />
         <Route path="/tvreviews/:id" element={<TvReviewPage/>} />
               </Routes>
       </MoviesContextProvider>

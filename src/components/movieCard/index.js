@@ -87,6 +87,13 @@ export default function MovieCard({ movie, action}) {
           </Button>
         </Link>
       </CardActions>
+      <CardActions disableSpacing>
+        <Link to={`/similarmovies/${movie.id}`}>
+          <Button variant="outlined" size="medium" color="primary">
+           Check out Similar Movies
+          </Button>
+        </Link>
+      </CardActions>
     </Card>
   );
 }

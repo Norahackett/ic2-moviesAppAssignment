@@ -4,9 +4,9 @@ import { MoviesContext } from "../contexts/moviesContext";
 import { useQueries } from "react-query";
 import { getMovie } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
-import PlaylistAddIcon from '../components/cardIcons/addToMustWatch'
+//import PlaylistAddIcon from '../components/cardIcons/addToMustWatch'
 import RemoveFromMustWatches from "../components/cardIcons/removeFromMustWatch";
-import WriteReview from "../components/cardIcons/writeReview";
+//import WriteReview from "../components/cardIcons/writeReview";
 
 const MustWatchMoviesPage = () => {
   const { mustWatches: movieIds } = useContext(MoviesContext);
@@ -41,7 +41,7 @@ const MustWatchMoviesPage = () => {
       action={(movie) => {
         return (
           <>
-            <RemoveFromMustWatches movie={movie} /> 
+            <RemoveFromMustWatches movie={movie} />
           </>
         );
       }}
