@@ -14,7 +14,7 @@ import StarRateIcon from "@material-ui/icons/StarRate";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
-import { MoviesContext } from "../../contexts/moviesContext";
+import { TvContext } from "../../contexts/tvContext";
 
 const useStyles = makeStyles({
   card: { maxWidth: 345 },
@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 
 export default function TvCard({ tv, action}) {
   const classes = useStyles();
-  const { favourites, addToFavourites } = useContext(MoviesContext);
+  const { favourites, addToFavourites } = useContext(TvContext);
 
   if (favourites.find((id) => id === tv.id)) {
     tv.favourite = true;

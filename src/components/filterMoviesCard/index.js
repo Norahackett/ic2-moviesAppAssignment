@@ -51,6 +51,11 @@ export default function FilterMoviesCard(props) {
     handleChange(e, "title", e.target.value);
   };
 
+  const handleVoteAverageChange = (e, props) => {
+    handleChange(e, "vote_average", e.target.value);
+  };
+  
+  
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
   };
@@ -72,6 +77,15 @@ export default function FilterMoviesCard(props) {
       variant="filled"
       onChange={handleTextChange}
     />
+    <TextField
+      className={classes.formControl}
+      id="filled-search"
+      label="Search field"
+      type="search"
+      value={props.voteAverageFilter}
+      variant="filled"
+      onChange={handleVoteAverageChange}
+    />
         <FormControl className={classes.formControl}>
           <InputLabel id="genre-label">Genre</InputLabel>
           <Select
@@ -89,6 +103,7 @@ export default function FilterMoviesCard(props) {
             })}
           </Select>
         </FormControl>
+        
       </CardContent>
     </Card>
     <Card className={classes.root} variant="outlined">
@@ -97,6 +112,24 @@ export default function FilterMoviesCard(props) {
             <SearchIcon fontSize="large" />
             Sort the movies.
           </Typography>
+
+          <FormControl className={classes.formControl}>
+          <InputLabel id="genre-label">Title (A-Z)</InputLabel>
+          <Select
+      labelId="genre-label"
+      id="genre-select"
+      value={props.titleFilter}
+      onChange={handleTextChange}
+    >
+            {genres.map((genre) => {
+              return (
+                <MenuItem key={genre.id} value={genre.id}>
+                  {genre.name}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
         </CardContent>
       </Card>
       </>

@@ -43,10 +43,11 @@ const SiteHeader = () => {
   const menuOptions = [
     { label: "Home", path: "/" },
     { label: "Upcoming", path: "/movies/upcoming" },
-    { label: "Favourites", path: "/movies/favourites" },
+    { label: "Favourites Movies", path: "/movies/favourites" },
     { label: "Must Watch", path: "/movies/must_watches" },
     { label: "Top Rated", path: "/movies/top_rated" },
     { label: "Tv Series", path: "/tv/tv_series" },
+    { label: "Favourites Tv", path: "/tv/favourites" },
   ];
 
   const handleMenuSelect = (pageURL) => {
