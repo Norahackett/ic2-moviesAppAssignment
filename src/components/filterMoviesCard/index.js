@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 export default function FilterMoviesCard(props) {
   const classes = useStyles();
   const { data, error, isLoading, isError } = useQuery("genres", getGenres);
-
+  
   if (isLoading) {
     return <Spinner />;
   }
@@ -37,6 +37,7 @@ export default function FilterMoviesCard(props) {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
+
   const genres = data.genres;
   if (genres[0].name !== "All"){
     genres.unshift({ id: "0", name: "All" });
@@ -51,10 +52,6 @@ export default function FilterMoviesCard(props) {
     handleChange(e, "title", e.target.value);
   };
 
-  const handleVoteAverageChange = (e, props) => {
-    handleChange(e, "vote_average", e.target.value);
-  };
-  
   
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
@@ -77,15 +74,6 @@ export default function FilterMoviesCard(props) {
       variant="filled"
       onChange={handleTextChange}
     />
-    <TextField
-      className={classes.formControl}
-      id="filled-search"
-      label="Search field"
-      type="search"
-      value={props.voteAverageFilter}
-      variant="filled"
-      onChange={handleVoteAverageChange}
-    />
         <FormControl className={classes.formControl}>
           <InputLabel id="genre-label">Genre</InputLabel>
           <Select
@@ -102,8 +90,7 @@ export default function FilterMoviesCard(props) {
               );
             })}
           </Select>
-        </FormControl>
-        
+        </FormControl>         
       </CardContent>
     </Card>
     <Card className={classes.root} variant="outlined">
@@ -112,7 +99,6 @@ export default function FilterMoviesCard(props) {
             <SearchIcon fontSize="large" />
             Sort the movies.
           </Typography>
-
           <FormControl className={classes.formControl}>
           <InputLabel id="genre-label">Title (A-Z)</InputLabel>
           <Select

@@ -35,6 +35,9 @@ function MustWatchistPageTemplate({ movies, title, action }) {
     .filter((m) => {
       return genreId > 0 ? m.genre_ids.includes(genreId) : true;
     });
+   // .filter((m) => {
+   //   return m.title.toLowerCase().search(titleFilter.toLowerCase()) !== -1;
+   // })
 
   const handleChange = (type, value) => {
     if (type === "title") setTitleFilter(value);
