@@ -79,5 +79,5 @@ Once the "Check out similar movies" is selected it will bring you to Similar mov
 [top_rated]: ./public/images/toprated.png
 [d2]: ./public/images/discovermovies.png
 [similar]: ./public/images/similarmovies.png
-[fullreview]: ./public/images/similarmovies.png
+[fullreview]: ./public/images/fullreview.png
 [review]: ./public/images/review.png
