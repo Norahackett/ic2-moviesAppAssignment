@@ -53,7 +53,7 @@ There is also a Filter option "Filter". This will give you a review of the tv se
 ![][fullreview]
 
 
-In the Favourities Tv page there is a option to delete and write a review. Clieck on the write icon to  write a review   
+In the Favourities Tv page there is a option to delete and write a review. Click on the write icon to  write a review   
 
 ![][writereview]
 
