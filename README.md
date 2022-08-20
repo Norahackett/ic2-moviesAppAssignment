@@ -1,26 +1,38 @@
 # moviesapp-ci-2021
 
 
-ICT Skills 2 Assignment.
+#ICT Skills 2 Assignment.
 Name: Nora Hackett
 
-[ A paragraph on your React app's concept followed by a bullet-point list of its feature set - only list new/modified features if you are expanding the Movies app. ]
+##Overview.
+I expanded the movies app from assignment 1 to include the following additional features- TV series, Similar movies and Top Rated movies. It also gives details on the TV series 
 
-e.g.
 
-Feature 1
-Feature 2
-Feature 3
-etc
-etc
+
+List - Similar Movies 
+List - Tv Series 
+List - Top Rated Movies 
+Detail - TV series Details 
+Also has TV favourities and review the Tv Series 
+
 Setup requirements.
-[ Briefly state (to a third party) the setup steps necessary to run your app/client locally, e.g. .env and any other config files.]
+To run the app please update the .env with your REACT_APP_TMDB_KEY
+
 
 App Design.
 Routing/Navigation.
-[List the set of routes your app supports - only mention new instances if you expanded the Movies Fan app. State the view linked with each route.]
+I expanded the Movies App. See updated routes for the new featues below 
 
 e.g.
+
+
+/tv/favourites - displays your tv series favourites on the favourities page 
+/similarmovies/:id/ - details similar moves to the movie dispalyed on the hoem page
+/tvreviews/:id - lets you write a review on a specifice tv series 
+/tv/tv_series - displays all the tv series on the Tv series page
+/tv/:id -detailed information on a specific tv series.
+tvreviews/form - 
+/movies/top_rated- lists top rated movies shown in cinemas
 
 /movies/:id - detailed information on a specific movie.
 /movies/upcoming - lists movies soon to be shown in cinemas.
@@ -72,5 +84,3 @@ Additional features (if relevant),
 
 Independent learning (if relevant),
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
-
-
