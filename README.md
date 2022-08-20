@@ -61,9 +61,9 @@ There is a page for Top rated movies
 ![][top_rated]
 
 
-You can select similar movies on the home page 
+You can select similar movies on the home page. See button to click circled in red
 
-![][d1]
+![][d2]
 
 Similar movies page displayed 
 
@@ -73,7 +73,7 @@ Similar movies page displayed
 
 [d1]: ./public/images/tvdiscover1.png
 [tvdetail]: ./public/images/tvdetail.png
-[tvF]: ./public/images/favouriteTv.png
+[tvF]: ./public/images/favouritetv.png
 [review]: ./public/images/tvreview.png
 [top_rated]: ./public/images/toprated.png
 [top_rated]: ./public/images/toprated.png
