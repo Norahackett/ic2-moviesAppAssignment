@@ -11,31 +11,28 @@ Detail - TV series Details
 Also has TV favourities and review the Tv Series 
 
 ## Setup requirements.
-To run the app please update the .env with your REACT_APP_TMDB_KEY
+To run the app please update the .env file with your REACT_APP_TMDB_KEY
 
 
 ## App Design.
 ### Routing/Navigation.
 I expanded the Movies App. See updated routes for the new featues below 
 
+/tv/tv_series - displays the tv series from TV Discover
 
-/tv/favourites - displays your tv series favourites on the favourities page 
+/tv/favourites - When you click the favurities button on the Tv series it adds the tv series to your favourities page 
 
-/similarmovies/:id/ - details similar moves to the movie dispalyed on the home page
+/tv/:id -details information on a specific tv series.
 
-/tvreviews/:id - lets you write a review on a specific tv series 
-
-/tv/tv_series - displays all the tv series on the Tv series page
-
-/tv/:id -detailed information on a specific tv series.
+/tvreviews/:id - lets you get a review of a specific tv series  
 
 tvreviews/form - review form for writing your review on a tv series
 
+/similarmovies/:id/ - there is a option on the movies home page to select similar movies and this brings up similar movies page
+
 /movies/top_rated- lists top rated movies shown in cinemas
 
-/movies/:id - detailed information on a specific movie.
 
-/movies/upcoming - lists movies soon to be shown in cinemas.
 
 ### Views/Pages.
 
@@ -43,39 +40,44 @@ Lists tv series from the Discover endpoint. Filtering on title and genre attribu
 
 ![][d1]
 
-Details on the tv series 
+Details on the tv series - Genres, length of tv series, number of episodes, production countries. 
 
 ![][tvdetail]
 
-You can add a tv series to a TV favourites page. There is a option here to remove or write a review on the TV series.
+You can add a tv series to your TV favourites page. There is a option here to remove or write a review on the TV series. 
+There is also a Filter option "Filter". This will give you a review of the tv series. There is also a option to select Full review. 
 
 ![][tvF]
 
-
-Write a review 
-
 ![][review]
+![][fullreview]
 
-There is a page for Top rated movies
+
+In the Favourities Tv page there is a option to delete and write a review. Clieck on the write icon to  write a review   
+
+![][writereview]
+
+There is a page with the Top rated movies at the cinema
 
 ![][top_rated]
 
 
-You can select similar movies on the home page. See button to click circled in red
+You can select similar movies on the home page. See "Check out similar movies" option on the home page
 
 ![][d2]
 
-Similar movies page displayed 
+Once the "Check out similar movies" is selected it will bring you to Similar movies page. 
 
 ![][similar]
-
 
 
 [d1]: ./public/images/tvdiscover1.png
 [tvdetail]: ./public/images/tvdetail.png
 [tvF]: ./public/images/favouritetv.png
-[review]: ./public/images/tvreview.png
+[writereview]: ./public/images/tvreview.png
 [top_rated]: ./public/images/toprated.png
 [top_rated]: ./public/images/toprated.png
 [d2]: ./public/images/discovermovies.png
 [similar]: ./public/images/similarmovies.png
+[fullreview]: ./public/images/similarmovies.png
+[review]: ./public/images/review.png
