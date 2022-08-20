@@ -78,4 +78,4 @@ Similar movies page displayed
 [top_rated]: ./public/images/toprated.png
 [top_rated]: ./public/images/toprated.png
 [d2]: ./public/images/discovermovies.png
-[similar]: ./public/images/simiarmovies.png
+[similar]: ./public/images/similarmovies.png
